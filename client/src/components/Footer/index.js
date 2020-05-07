@@ -1,6 +1,9 @@
+// import react
 import React from "react";
 
+// Footer function component
 function Footer() {
+  // return JSX
   return (
     <footer>
       <hr />
@@ -11,4 +14,5 @@ function Footer() {
   );
 }
 
+// export Footer component
 export default Footer;

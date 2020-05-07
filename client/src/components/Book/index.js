@@ -1,9 +1,15 @@
+// import React
 import React from "react";
+// import ListItem component
 import { ListItem } from "../List";
+// Import Row and Col components
 import { Row, Col } from "../Grid";
+// import 
 import "./style.css";
 
+// Book function component - deconstruct props
 function Book({ title, subtitle, authors, link, description, image, Button }) {
+  // JSX to be rendered to page
   return (
     <ListItem>
       <Row className="flex-wrap-reverse">
@@ -37,4 +43,5 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
   );
 }
 
+// export Book component
 export default Book;

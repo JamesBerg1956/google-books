@@ -1,6 +1,9 @@
+// import mongoose
 const mongoose = require("mongoose");
+// import schema from mongoose
 const Schema = mongoose.Schema;
 
+// define key value pairs of bookSchema
 const bookSchema = new Schema({
   title: { type: String, required: true },
   subtitle: { type: String },
@@ -11,6 +14,8 @@ const bookSchema = new Schema({
   googleId: { type: String, required: true, unique: true }
 });
 
+// create Book object using mongoose model method
 const Book = mongoose.model("Book", bookSchema);
 
+// export Book model
 module.exports = Book;

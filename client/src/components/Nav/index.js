@@ -1,35 +1,53 @@
+// import react and Component
 import React, { Component } from "react";
+// import Link component
 import { Link } from "react-router-dom";
+// import external spreadsheet
 import "./style.css";
 
+// Nav class component
 class Nav extends Component {
+  // create a state object
   state = {
     open: false,
     width: window.innerWidth
   };
 
+  // updateWidth function 
   updateWidth = () => {
+
+    // get current window width
     const newState = { width: window.innerWidth };
 
+    // if the window is open and window width is > 991
     if (this.state.open && newState.width > 991) {
+      // set the open state to false
       newState.open = false;
     }
 
+    // set the new state for width
     this.setState(newState);
   };
 
+  // toggleNav function
   toggleNav = () => {
+    // reverse the state of open
     this.setState({ open: !this.state.open });
   };
 
+  // this is called anytime a component renders
   componentDidMount() {
+    // add an event listener called resize to window object
     window.addEventListener("resize", this.updateWidth);
   }
 
+  // this is called anytime a component is unrendered
   componentWillUnmount() {
+    // remove the event listener from the window
     window.removeEventListener("resize", this.updateWidth);
   }
 
+  // render elements to the page
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
@@ -74,4 +92,5 @@ class Nav extends Component {
   }
 }
 
+// export Nav component
 export default Nav;

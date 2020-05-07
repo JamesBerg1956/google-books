@@ -1,6 +1,9 @@
+// import React
 import React from "react";
 
+// Form function component
 function Form({ q, handleInputChange, handleFormSubmit }) {
+  // return JSX
   return (
     <form>
       <div className="form-group">
@@ -31,4 +34,5 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
   );
 }
 
+// export Form component
 export default Form;

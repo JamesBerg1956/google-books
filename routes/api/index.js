@@ -1,5 +1,8 @@
+// import path package
 const path = require("path");
+// import router package
 const router = require("express").Router();
+// import routes
 const bookRoutes = require("./books");
 const googleRoutes = require("./google");
 
@@ -14,4 +17,5 @@ router.use(function(req, res) {
   res.sendFile(path.join(__dirname, "../../client/build/index.html"));
 });
 
+// export router
 module.exports = router;

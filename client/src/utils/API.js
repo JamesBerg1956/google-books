@@ -1,5 +1,7 @@
+// import axios
 import axios from "axios";
 
+// export these methods
 export default {
   // Gets books from the Google API
   getBooks: function(q) {
